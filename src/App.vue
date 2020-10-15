@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Candour"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <MainWebPage msg="Candour" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainWebPage from "./components/MainWebPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MainWebPage,
+  },
+};
 </script>
 
 <style>
