@@ -1,4 +1,4 @@
-# candourtest
+# Candour
 
 ## Project setup
 ```
