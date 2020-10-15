@@ -21,7 +21,7 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-deploy:
+  deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
