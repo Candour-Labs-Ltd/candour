@@ -1,9 +1,18 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    <Sidebar darken />
+    <Sidebar />
     <vs-row>
-      <vs-col> </vs-col>
+      <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="12">
+        <h1 class="main-title">{{ msg }}</h1>
+        <h3 class="sub-text">
+          <i>({{ subtext }})</i>
+        </h3>
+        <p>Ethical Social Networking</p>
+      </vs-col>
+    </vs-row>
+    <vs-row>
+      <vs-col offset="5" w="5">
+      </vs-col>
     </vs-row>
   </div>
 </template>
@@ -14,10 +23,11 @@ import Sidebar from "./Sidebar.vue";
 export default {
   name: "MainWebPage",
   components: {
-    Sidebar,
+    Sidebar
   },
   props: {
     msg: String,
+    subtext: String,
   },
   data() {
     return {
@@ -32,9 +42,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 10px 0 0;
+h1 {
+  padding-top: 75px;
 }
+
 ul {
   list-style-type: none;
   padding: 0;

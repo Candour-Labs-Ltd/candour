@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MainWebPage msg="Candour" />
+    <MainWebPage msg="Candour" subtext="Kan-Da" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      darken: {}
+      darken: {},
     };
   },
 };
@@ -28,6 +28,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: rgb(30, 32, 35);
 }
 
 #app {
@@ -35,29 +36,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  justify-content: center;
   color: #2c3e50;
-  background: grey;
+  background: rgb(30, 32, 35);
   display: flex;
   height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-h1 {
+.main-title {
   font-family: "Poiret One", sans-serif;
-  font-size: 20rem;
+  font-size: 200px;
   color: #fff;
+  margin: 0px;
+  padding: 0px;
 }
 
-darken {
-  text-align: center;
-  color: #2c3e50;
-  background: black;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.sub-text {
+  font-family: "Poiret One", sans-serif;
+  font-size: 60px;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
 }
 </style>

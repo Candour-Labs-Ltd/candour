@@ -4,7 +4,6 @@ import Vuesax from "vuesax";
 import "vuesax/dist/vuesax.css"; //Vuesax styles
 import 'boxicons'
 
-
 Vue.use(Vuesax, {
   // options here
   colors: {
@@ -12,7 +11,7 @@ Vue.use(Vuesax, {
     success: "rgb(23, 201, 100)",
     danger: "rgb(242, 19, 93)",
     warning: "rgb(255, 130, 0)",
-    dark: "rgb(0, 0, 0)",
+    dark: "rgb(30, 32, 35)",
   },
 });
 
