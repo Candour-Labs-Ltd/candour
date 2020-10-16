@@ -2,25 +2,29 @@
   <div>
     <vs-sidebar
       textWhite
-      background="dark"
+      background="rgb(7, 14, 21)"
       absolute
       hover-expand
       reduce
       v-model="active"
       open
     >
+    <router-link class="sidebar-link" to="/">
       <vs-sidebar-item id="home">
         <template #icon>
           <i class="bx bx-home"></i>
         </template>
         Home
       </vs-sidebar-item>
-      <vs-sidebar-item id="contacts">
+    </router-link>
+      <router-link class="sidebar-link" to="/about">
+      <vs-sidebar-item id="about">
         <template #icon>
-          <i class="bx bx-info-circle"></i>
+          <i class="bx bx-book"></i>
         </template>
         About
       </vs-sidebar-item>
+      </router-link>
       <!-- <vs-sidebar-item id="chat">
        <template #icon>
           <i class="bx bx-chat"></i>
@@ -56,6 +60,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.sidebar-link {
+  text-decoration: none;
+}
+
 h5 {
   font-size: 20px;
 }
