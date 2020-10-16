@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Candour" src="./assets/logo_long.png" width="50%" height="50%" />
     <MainWebPage msg="Candour" />
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: black;
   margin-top: 60px;
 }
 </style>

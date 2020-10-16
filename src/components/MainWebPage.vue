@@ -1,46 +1,59 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>SOCIAL NETWORK ANOTHER TEST DEPLOY</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>TEST</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="app">
+    <Sidebar />
+    <vs-row>
+      <vs-col
+        vs-type="flex"
+        vs-justify="center"
+        vs-align="center"
+        w="12"
+        offset="5"
+      >
+        <vs-button danger @click="toggleDarkMode()"> Dark Mode </vs-button>
+      </vs-col>
+    </vs-row>
   </div>
 </template>
 
 <script>
+import Sidebar from "./Sidebar.vue";
+
 export default {
-  name: 'MainWebPage',
+  name: "MainWebPage",
+  components: {
+    Sidebar,
+  },
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+  data() {
+    return {
+      darkmode: {
+        backgroundColor: "#16a085",
+      },
+    };
+  },
+  methods: {
+    toggleDarkMode() {
+      if (this.darkmode) {
+        console.log("Dark Mode is on");
+      } else {
+        console.log("Dark Mode is off");
+      }
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 h3 {
   margin: 40px 0 0;
 }
