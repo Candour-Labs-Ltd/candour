@@ -1,8 +1,16 @@
 <template>
-  <div dark>
-    <vs-sidebar dark absolute v-model="active" open>
+  <div>
+    <vs-sidebar
+      textWhite
+      background="dark"
+      absolute
+      hover-expand
+      reduce
+      v-model="active"
+      open
+    >
       <template #logo>
-        <img src="../assets/logo_long.png" alt="" />
+        <h5>Candour</h5>
       </template>
       <vs-sidebar-item id="home">
         <template #icon>
@@ -12,25 +20,24 @@
       </vs-sidebar-item>
       <vs-sidebar-item id="contacts">
         <template #icon>
-          <i class="bx bxs-shopping-bags"></i>
+          <i class="bx bx-book"></i>
         </template>
         Contacts
       </vs-sidebar-item>
       <vs-sidebar-item id="chat">
-        <template #icon>
+       <template #icon>
           <i class="bx bx-chat"></i>
         </template>
         Chat
       </vs-sidebar-item>
       <template #footer>
         <vs-row justify="space-between">
-          <vs-avatar>
-            <img src="/avatars/avatar-5.png" alt="" />
+          <vs-avatar primary>
+            <img src="../assets/alan_avatar.png" alt="" />
           </vs-avatar>
 
-          <vs-avatar badge-color="danger" badge-position="top-right">
+          <vs-avatar success badge-color="danger" badge-position="top-right">
             <i class="bx bx-bell"></i>
-
             <template #badge> 28 </template>
           </vs-avatar>
         </vs-row>
@@ -41,13 +48,12 @@
 
 <script>
 export default {
-  mounted() {
-    this.$vs.setColor("dark", "#000");
-  },
   name: "Sidebar",
-  data: () => ({
-    active: "home",
-  }),
+  data() {
+    return {
+      active: "home",
+    };
+  },
 };
 </script>
 

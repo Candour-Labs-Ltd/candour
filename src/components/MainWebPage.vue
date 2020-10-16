@@ -1,16 +1,9 @@
 <template>
-  <div class="app">
-    <Sidebar />
+  <div>
+    <h1>{{ msg }}</h1>
+    <Sidebar darken />
     <vs-row>
-      <vs-col
-        vs-type="flex"
-        vs-justify="center"
-        vs-align="center"
-        w="12"
-        offset="5"
-      >
-        <vs-button danger @click="toggleDarkMode()"> Dark Mode </vs-button>
-      </vs-col>
+      <vs-col> </vs-col>
     </vs-row>
   </div>
 </template>
@@ -28,34 +21,19 @@ export default {
   },
   data() {
     return {
-      darkmode: {
-        backgroundColor: "#16a085",
-      },
+      theme: true,
     };
   },
   methods: {
-    toggleDarkMode() {
-      if (this.darkmode) {
-        console.log("Dark Mode is on");
-      } else {
-        console.log("Dark Mode is off");
-      }
-    },
+    toggleDarkMode() {},
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.app {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 h3 {
-  margin: 40px 0 0;
+  margin: 10px 0 0;
 }
 ul {
   list-style-type: none;
